@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9; /* Tono claro y cálido */
+    color: #3d3d3d; /* Gris oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d4a373; /* Ocre suave */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 3px solid #8c6e53; /* Tono marrón */
+}
+
+main {
+    padding: 2rem;
+}
+
+#chat-container {
+    background-color: #f0e0c9; /* Beige cálido */
+    border: 2px solid #d4a373; /* Ocre suave */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3d3d3d; /* Gris oscuro */
+    color: #f7f3e9; /* Color de contraste claro */
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #8c6e53; /* Tono marrón */
+}
+
+a {
+    color: #2b6777; /* Azul profundo */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f0a500; /* Dorado */
+}
