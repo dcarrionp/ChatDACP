@@ -1,87 +1,82 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* Styling for chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid #d4af37; /* Dutch gold color */
+    border-radius: 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f7f3e9; /* Subtle off-white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-:root {
-    color-scheme: light dark;
-}
-
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    padding: 36px 36px 100px 36px;
-    grid-template-rows: 1fr;
-    background-color: #f7f3e9; /* Fondo cálido */
+/* Styling for chat box */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    border-bottom: 2px solid #d4af37;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    color: #333;
 }
 
 #messages {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    overflow-y: scroll;
-    height: 100%;
-    scroll-behavior: smooth;
-    padding-bottom: 48px;
+    margin: 0;
 }
 
 #messages > li {
-    padding: .5rem 1rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0e68c; /* Warm light color */
+    color: #3c3c3c;
 }
 
-#messages > li:nth-child(odd) {
-    background: #8c6e53; /* Tono marrón suave */
-    color: #fff; /* Contraste de texto */
+#messages > li:nth-child(odd){
+    background: #787346;
 }
 
-#chat {
-    border: 1px solid #d4a373; /* Ocre suave */
-    border-radius: 4px;
-    overflow: hidden;
-    width: 350px;
-    height: 100%;
-    position: relative;
-    background-color: #f0e0c9; /* Fondo del chat */
-}
 
-#form {
-    bottom: 0;
+/* Styling for chat footer */
+.chat-footer {
     display: flex;
-    height: 48px;
-    left: 0;
-    padding: 4px;
-    position: absolute;
-    right: 0;
-    background-color: #f7f3e9; /* Fondo claro */
-}
-
-#input {
-    border-radius: 9999px;
-    border: 1px solid #d4a373; /* Borde ocre */
-    flex: 1;
-    margin: 4px;
-    padding: 0 8px;
+    padding: 10px;
+    border-top: 2px solid #d4af37;
     background-color: #fff;
 }
 
-#input:focus {
-    outline: 0;
-    border-color: #8c6e53; /* Cambio de borde al hacer foco */
+/* Input styling */
+input[type="text"] {
+    flex: 1;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+    background-color: #f8f5f0;
 }
 
-#form > button {
-    background: #d4a373; /* Botón con fondo ocre */
+input[type="text"]:focus {
+    border-color: #c79b3b;
+}
+
+/* Button styling */
+button {
+    background-color: #d4af37;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
     color: #fff;
-    border: 0;
-    margin: 4px;
-    border-radius: 4px;
-    transition: background 0.3s;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
-#form > button:hover {
-    background: #8c6e53; /* Color más oscuro al pasar el mouse */
+button:hover {
+    background-color: #b8912e;
 }

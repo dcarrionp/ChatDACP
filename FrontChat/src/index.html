@@ -6,26 +6,41 @@
   <title>Chat</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <script type="module">
-    import { io } from 'https://cdn.socket.io/4.8.1/socket.io.esm.min.js'
-    const socket = io()
+    import { io } from 'https://cdn.socket.io/4.8.1/socket.io.esm.min.js';
 
-    const form = document.getElementById('form')
-    const input = document.getElementById('input')
+    // Initialize the socket
+    const socket = io();
 
-    socket.on
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('chatForm');
+      const input = document.getElementById('textForm');
+      const messages = document.getElementById('messages');
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault()
-
-      if (input.value) {
-        socket.emit('chat message', input.value)
-        input.value = ''
+      // Check if elements exist
+      if (!form || !input || !messages) {
+        console.error('One or more elements (form, input, messages) not found.');
+        return;
       }
-    })
-  </script>
+
+      // Listen for incoming messages
+      socket.on('chat message', (msg) => {
+        const item = `<li>${msg}</li>`;
+        //messages.insertAdjacentHTML('beforeend', item);
+      });
+
+      // Handle form submission
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value.trim()) {
+          socket.emit('chat message', input.value.trim());
+          input.value = ''; // Clear the input field
+        }
+      });
+    });
+</script>
+
 </head>
 
 <body>
