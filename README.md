@@ -11,6 +11,7 @@ Aplicación de chat con frontend en Angular y backend en Node.js, configurada pa
 ### Paso 1: Descargar la imagen de Docker Hub
 
 Ejecuta el siguiente comando para descargar la imagen:
+
 Version 1.0
 ```bash
 docker pull dcarrionp/blurchat
