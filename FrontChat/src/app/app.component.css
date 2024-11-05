@@ -9,6 +9,21 @@
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #f7f3e9; /* Subtle off-white background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Styling for chat header */
+.chat-header {
+    padding: 10px;
+    background-color: #d4af37; /* Same Dutch gold color */
+    color: #fff;
+    text-align: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Styling for chat box */
@@ -35,7 +50,6 @@
     background-color: #f0e68c; /* Warm light color */
     color: #3c3c3c;
 }
-
 
 /* Styling for chat footer */
 .chat-footer {
@@ -75,4 +89,13 @@ button {
 
 button:hover {
     background-color: #b8912e;
+}
+
+/* Styling for app footer */
+.app-footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #d4af37;
+    color: #fff;
 }
