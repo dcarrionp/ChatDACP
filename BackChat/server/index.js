@@ -25,12 +25,12 @@ io.on('connection', (socket) => {
 
 app.use(logger('dev'))
 
-const angularDistPath = path.join(process.cwd(), '../FrontChat/dist/front-chat/browser')
-app.use(express.static(angularDistPath))
+const angularDistPath = path.join(process.cwd(), 'public');
+app.use(express.static(angularDistPath));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(angularDistPath, 'index.html'))
-})
+app.get('*', (req, res) => {
+  res.sendFile(path.join(angularDistPath, 'index.html'));
+});
 
 
 server.listen(port, () => {
