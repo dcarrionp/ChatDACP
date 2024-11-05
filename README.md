@@ -12,4 +12,4 @@ Aplicación de chat con frontend en Angular y backend en Node.js, configurada pa
 
 Ejecuta el siguiente comando para descargar la imagen:
 ```bash
-docker pull tu_usuario_dockerhub/blurchat
+docker pull dcarrionp/blurchat
