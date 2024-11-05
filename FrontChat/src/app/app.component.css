@@ -36,10 +36,6 @@
     color: #3c3c3c;
 }
 
-#messages > li:nth-child(odd){
-    background: #787346;
-}
-
 
 /* Styling for chat footer */
 .chat-footer {
